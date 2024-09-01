@@ -35,7 +35,7 @@ const Mainbody = ({setScore}) => {
         }
     }
     const decision=()=>{
-        if(computerPlay){
+        // if(computerPlay){
             if(computerPlay===userPlay){
                 setResult("It's a DRAW")
                 }
@@ -49,7 +49,7 @@ const Mainbody = ({setScore}) => {
                 setCount(()=>{setScore(count+1);return count+1})
                 setCompleteUpdate(true)
                 }
-        }
+        // }
         
     }
     useEffect(()=>{
@@ -92,8 +92,8 @@ const Mainbody = ({setScore}) => {
                 </div>
             }
             {!clicked &&
-                    <div className=" w-3/4 mainbody">
-                        <div className="flex items-center justify-center gap-20 w-full h-2/4">
+                    <div className=" w-4/5 mainbody">
+                        <div className="flex items-center justify-center gap-10 w-full h-2/4">
                             <div className=" rounded-full" style={{backgroundColor:"hsl(230, 69%, 40%)"}}>
                                 <button onClick={()=>{setClicked(true);setUserPlay("paper");random()}}><img src={paper}  className="actions "alt=""  style={{borderColor:"hsl(230, 89%, 62%)"}}/></button>
                             </div>
@@ -111,8 +111,8 @@ const Mainbody = ({setScore}) => {
                 
             }
             {clicked &&
-                <div className=" justify-between w-full px-10   step2main">
-                    <div className="flex   justify-center gap-20 items-center h-60 lg:h-80">
+                <div className=" justify-between w-full    step2main">
+                    <div className="flex w-full   justify-center gap-8 items-center h-60 lg:h-80">
                         {userPlay=="rock" &&
                             <div className="flex  flex-col justify-between h-44 lg:h-64" >
 
